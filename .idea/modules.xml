@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/Evote_Spring_React.iml" filepath="$PROJECT_DIR$/.idea/Evote_Spring_React.iml" />
+      <module fileurl="file://$PROJECT_DIR$/spring-boot-spring-security-jwt-authentication-master/spring-boot-security-jwt.iml" filepath="$PROJECT_DIR$/spring-boot-spring-security-jwt-authentication-master/spring-boot-security-jwt.iml" />
     </modules>
   </component>
 </project>

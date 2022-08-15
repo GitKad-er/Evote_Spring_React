@@ -72,6 +72,7 @@ public class UserDetailController {
             userFound.setLastname(userDetails.getLastname());
             userFound.setEmail(userDetails.getEmail());
             userFound.setBirthdate(userDetails.getBirthdate());
+            userFound.setAge(LocalDateTime.now().getYear() - userDetails.getBirthdate().getYear());
             userFound.setSex(userDetails.getSex());
 
             UserDetail updatedUser = userDetailRepository.save(userFound);
@@ -107,7 +108,11 @@ public class UserDetailController {
                     .body(new MessageResponse("Erreur: Courriel déjà associé à un compte"));
         } else {
 
-            UserDetail userDetail = new UserDetail(signUpRequest.getUsername(), "Kad",
+            UserDetail userDetail = new UserDetail(signUpRequest.getFirstname(),
+                    signUpRequest.getLastname(),
+                    signUpRequest.getBirthdate(),
+                    signUpRequest.getAge(),
+                    signUpRequest.getSex(),
                     signUpRequest.getEmail(),
                     encoder.encode(signUpRequest.getPassword()));
 
@@ -161,14 +166,18 @@ public class UserDetailController {
                     .body(new MessageResponse("Erreur: Courriel déjà associé à un compte"));
         } else {
 
-            UserDetail userDetail = new UserDetail(signUpRequest.getUsername(), "Kad",
+            UserDetail userDetail = new UserDetail(signUpRequest.getFirstname(),
+                    signUpRequest.getLastname(),
+                    signUpRequest.getBirthdate(),
+                    signUpRequest.getAge(),
+                    signUpRequest.getSex(),
                     signUpRequest.getEmail(),
                     encoder.encode(signUpRequest.getPassword()));
 
 
             Set<Role> roles = new HashSet<>();
 
-            roles.add(roleRepository.findByName(ERole.ROLE_ADMIN));
+            roles.add(roleRepository.findByName(ERole.ROLE_USER));
 
 
             // Create new user's account

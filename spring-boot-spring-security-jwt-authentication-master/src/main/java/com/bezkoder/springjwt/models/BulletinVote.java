@@ -17,13 +17,15 @@ public class BulletinVote {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    private Long codeVote;
+    private String libelle;
+    private String codeVote;
 
 
     //Relation avec users
     @OneToOne(cascade = CascadeType.ALL)
-    @JoinColumn(name="user_id",referencedColumnName = "id")
+    @JoinColumn(name="user_id",referencedColumnName = "id" , insertable = false, updatable = false)
     private UserDetail userDetails;
+    private Long user_id;
 
     //Relation avec vote
     @OneToMany(mappedBy = "bulletinVote")

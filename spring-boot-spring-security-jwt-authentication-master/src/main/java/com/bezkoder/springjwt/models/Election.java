@@ -20,16 +20,16 @@ public class Election {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @NotBlank
+
+
     private String description;
 
-    @NotBlank
+
     private Date datedeb;
-    @NotBlank
+
     private Date datefin;
 
-    private  Boolean ouvert;
-    private Boolean ferme;
+    String status;
 
 
 

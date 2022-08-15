@@ -58,11 +58,14 @@ public class UserDetail implements UserDetails {
 
   //private Collection<? extends GrantedAuthority> authorities;
 
-  public UserDetail(Long id, String firstname, String email, String password, ERole eRole
+  public UserDetail(Long id, String firstname, String lastname, Date birthdate, int age ,String email, String password, ERole eRole
                     //    Collection<? extends GrantedAuthority> authorities
   ) {
     this.id = id;
     this.firstname = firstname;
+    this.lastname = lastname;
+    this.birthdate = birthdate;
+    this.age = age;
     this.email = email;
     this.password = password;
     this.eRole = eRole;
@@ -93,11 +96,17 @@ public class UserDetail implements UserDetails {
     this.password = password;
     this.eRole = eRole;
   }
-  public UserDetail(String firstname, String lastname, String email, String password) {
+  public UserDetail(String firstname, String lastname, Date birthdate, int age , char sex, String email, String password
+                    //    Collection<? extends GrantedAuthority> authorities
+  ) {
     this.firstname = firstname;
-
+    this.lastname = lastname;
+    this.birthdate = birthdate;
+    this.age = age;
+    this.sex = sex;
     this.email = email;
     this.password = password;
+    //this.authorities = authorities;
   }
 
   @Override

@@ -19,11 +19,11 @@ public class Vote {
 
     //Relation avec Candidat
     @ManyToOne
-    @JoinColumn(name="candidat_id")
+    @JoinColumn(name="candidat_id", insertable = false, updatable = false)
     Candidat candidat;
 
     //Relation avec Bulletin
     @ManyToOne
-    @JoinColumn(name="bulletin_id")
+    @JoinColumn(name="bulletin_id", insertable = false, updatable = false, nullable = false)
     BulletinVote bulletinVote;
 }

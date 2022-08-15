@@ -7,6 +7,7 @@ import com.bezkoder.springjwt.repository.ElectionRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.Date;
 import java.util.List;
 import java.util.Optional;
 
@@ -18,6 +19,10 @@ public class ElectionService {
 
     public List<Election> getAllElection() {
         return electionRepository.findAll();
+    }
+
+    public List<Election> getAllComingElection(){
+        return electionRepository.findAllByStatus("A venir");
     }
 
     public Election saveElection(Election election) {
@@ -32,5 +37,9 @@ public class ElectionService {
             return election;
         }
         throw new ResourceNotFoundException("Election inexistante");
+    }
+
+    public List<Election> getValidElection(Date date) {
+       return electionRepository.findAll();
     }
 }

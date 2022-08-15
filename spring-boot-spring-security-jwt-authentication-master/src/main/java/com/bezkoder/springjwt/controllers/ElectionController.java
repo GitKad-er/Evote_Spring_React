@@ -8,6 +8,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.Date;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -32,9 +33,10 @@ public class ElectionController {
     public Election createElection(@RequestBody Election election){
         return  electionService.saveElection(election);
     }
+
     //Mise à jour d'une election
     @PutMapping("/update/{id}")
-    public ResponseEntity<Election> updateElection(@PathVariable Long id, @RequestBody Election  election) {
+    public ResponseEntity<Election> updateElection(@PathVariable Long id, @RequestBody Election election) {
 
         if (electionService.getElection(id).getClass() == election.getClass()) {
 
@@ -63,5 +65,10 @@ public class ElectionController {
 
         }
     }
+
+    /*@GetMapping("/aVenir")
+    public List<Election> electionsValides(){
+        return electionService.getValidElection(new Date());
+    }*/
 
 }
