@@ -1,0 +1,39 @@
+{
+    "upload": "Charger",
+    "more": "Afficher plus",
+    "loadingText": "Chargement...",
+    "emptyDataText": "Aucune données disponible pour l'instant",
+    "dictAcceptedFilesLabel": "Selectionner un fichier",
+    "dictFallbackMessageLabel": "Votre navigateur est obselète, mettez à jour le navigateur assurer une meilleur utilisateur de notre plateforme",
+    "dictFileTooBigLabel": "La taille du fichier doit être inférieure à ou égale {{maxFilesize}}Mo. Taille du fichier : ({{filesize}}Mo): ",
+    "dictInvalidFileTypeLabel": "Le format du fichier chargé est invalid",
+    "dictCancelUploadLabel": "Chargement annulé",
+    "dictResponseErrorLabel": "Une erreur survenue lors de l'envoi du fichier sur le serveur",
+    "dictCancelUploadConfirmationLabel": "Voulez-vous annuler le chargement du fichier",
+    "dictRemoveFileConfirmationLabel": "Veuillez confirmer la suppression du fichier",
+    "dictRemoveFileLabel": "Supprimer",
+    "dictMaxFilesExceededLabel": "Vous avez atteint la limite du nombre de fichier à charger",
+    "validation": {
+      "maxValue": "Le nombre maximal de caratères de ce champ est ",
+      "minValue": "Ce champ doit contenir au minimum",
+      "invalid": "La valeur de ce champ est invalide",
+      "required": "Ce champ est requis",
+      "unique": "Cette valeur est déjà existante dans la base de données",
+      "email": "Format d'email invalide [example@email.com]",
+      "pattern": "La valeur de ce champ est invalide",
+      "min": "La valeur minimal de ce champ est {{value}}",
+      "max": "La valeur maximal de ce champ est {{value}}",
+      "phone": "Veuillez saisir un numero de téléphone valide {{value}}",
+      "passwordPattern": "La valeur du mot de passe doit contenir aux minimum 6 caractères",
+      "passwordMatch": "Les valeurs des champ mot de passe et de la confirmation du mot de passe ne correspondent pas",
+      "minDate": "Veuillez saisir ou sélectionnez une date après la date du {{date}}",
+      "maxDate": "Veuillez saisir ou sélectionnez une date avant la date du {{date}}",
+      "parentUUIDInvalid": "Le parrain spécifié est soit inextant ou dispose déja du maximum de filleul",
+      "emailTakenError": "Cet adresse mail est déja prise.",
+      "invalidVerificationCode": "Le code de vérification est soit incorrecte ou invalide"
+    },
+    "pagination": {
+      "of": "sur"
+    }
+  }
+  

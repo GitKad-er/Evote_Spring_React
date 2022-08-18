@@ -1,0 +1,274 @@
+/* You can add global styles to this file, and also import other style files */
+@import "~ngx-toastr/toastr";
+@import "~ngx-chart/styles.scss";
+
+.a {
+  width: 288px;
+}
+
+html,
+body {
+  height: 100%;
+}
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+.load {
+  position: relative;
+  top: -5rem;
+  left: 1.4rem;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 15px;
+  width: 120px;
+  z-index: 3;
+}
+
+body h3:not([cds-text]) {
+  font-size: 0.95rem;
+  margin-bottom: 1.1rem;
+}
+
+.required-field {
+  color: red;
+}
+
+.sib_items {
+  font-weight: bold;
+  font-size: 130%;
+}
+
+.sib_item {
+  font-size: 130%;
+}
+
+.header.header-6 {
+  background-color: rgba(1, 21, 94, 0.88);
+}
+
+header.header-6 .branding .title {
+  color: white;
+  font-weight: bold;
+  margin-top: 5px;
+  font-size: 125%;
+}
+.header-actions.hide-for-print {
+  font-size: 0.7rem;
+}
+
+.card.big-card {
+  border-radius: 8px;
+}
+
+#btnLigne {
+  text-decoration: none;
+}
+
+.btn-block {
+  text-align: left;
+  margin: 2%;
+}
+.hr1 {
+  border: 0;
+  height: 1px;
+  background: #095484;
+  background-image: linear-gradient(to right, #ccc, #095484, #ccc);
+}
+.card-subtitle {
+  font-size: 15px;
+}
+
+/** ========================= TABLEAUX ========================= */
+.data-area .table-container clr-dg-column {
+  font-size: 0.8rem;
+  line-height: 1.4rem;
+}
+.data-area .table-container clr-dg-cell {
+  font-size: 0.65rem;
+  font-weight: 420;
+}
+.datagrid-table .datagrid-cell {
+  font-size: 0.7rem;
+  line-height: 1.5;
+}
+
+/** ========================= DETAILS TABLE ========================= */
+
+.table-container table {
+  width: 100%;
+}
+
+.table-container table td,
+.table-container table th {
+  border: 2px solid #ddd;
+  padding: 8px;
+}
+
+.table-container table td {
+  text-align: right;
+}
+
+.table-container table tr:hover {
+  background-color: rgb(202, 202, 202);
+}
+
+.table-container table th {
+  font-size: 0.8rem;
+  line-height: 1rem;
+  background-color: #f3f3f3;
+  text-align: left;
+}
+
+.hrLigne {
+  color: rgb(75, 78, 75);
+  margin-top: 0%;
+  margin-bottom: 1rem;
+}
+/** ========================= FORMULAIRE ========================= */
+.form {
+  background: #e8e8e8;
+  padding: 30px;
+}
+
+.form-label {
+  font-size: 0.85rem;
+  display: flex;
+  font-weight: 600;
+  line-height: 1.5rem;
+}
+
+.form-control {
+  width: 100%;
+  padding: 5px;
+  border: 1px solid;
+}
+
+select {
+  width: 100%;
+  padding: 5px;
+}
+
+.clr-input-wrapper {
+  white-space: nowrap;
+  max-height: 1.2rem;
+  background: #fff;
+}
+.clr-textarea-wrapper {
+  white-space: nowrap;
+  display: flex;
+  margin-top: 0.3rem;
+  background: white;
+}
+
+.ng-select.ng-select-single .ng-select-container {
+  height: 26px;
+  border: 1px solid;
+}
+
+.modal {
+  animation: appear 500ms ease-out 1;
+}
+.modal-header {
+  background-color: #d4d4d4;
+  color: white;
+}
+@keyframes appear {
+  0% {
+    transform: translateY(-50px);
+  }
+}
+
+.page {
+  overflow-x: hidden;
+}
+
+.header.header-6 {
+  background-color: rgba(1, 21, 94, 0.88);
+}
+
+h2:not([cds-text]) {
+  color: #042124;
+}
+
+/* .clr-vertical-nav {
+  background-color: #042124;
+}
+
+.clr-vertical-nav .nav-group-trigger {
+  color: #fff;
+}
+
+.clr-vertical-nav .nav-group.active:not(.is-expanded) .nav-group-content {
+  background-color: #00693e;
+} */
+
+.datagrid .datagrid-column {
+  background-color: #053237;
+}
+.datagrid-table .datagrid-column .datagrid-column-title {
+  color: #fff;
+}
+.btn-primary .btn {
+  border-color: #1c9e49;
+  background-color: #1c9e49;
+  color: #fff;
+}
+.btn-group .btn.btn-outline {
+  border-color: #1c9e49;
+  background-color: transparent;
+  color: #1c9e49;
+}
+.btn.btn-outline clr-icon {
+  color: #1c9e49;
+}
+.nav .nav-link.active {
+  color: #1c9e49;
+  font-weight: 400;
+}
+.btn.btn-link,
+.btn-link .btn {
+  border-color: transparent;
+  background-color: transparent;
+  color: #053237;
+}
+.btn.btn-link cds-icon,
+.btn.btn-link clr-icon,
+.btn-link .btn cds-icon,
+.btn-link .btn clr-icon {
+  color: #053237;
+}
+.btn.btn-primary,
+.btn-primary .btn {
+  border-color: #1c9e49;
+  background-color: #1c9e49;
+  color: #fff;
+}
+.btn.btn-outline,
+.btn.btn-outline .btn,
+.btn.btn-info-outline,
+.btn-info-outline .btn,
+.btn.btn-outline-info,
+.btn-outline .btn {
+  border-color: #1c9e49;
+  background-color: transparent;
+  color: #1c9e49;
+}
+.clr-row .card.big-card .card-block .big-icon clr-icon {
+  height: 32px;
+  width: 32px;
+  color: #1c9e49;
+}
+.clr-vertical-nav .nav-group.active:not(.is-expanded) .nav-group-content {
+  border-left: 0.15rem solid #1c9e49;
+}
+.clr-vertical-nav
+  .nav-group.active:not(.is-expanded)
+  .nav-group-content
+  .nav-icon {
+  fill: #1c9e49;
+}
+.clr-vertical-nav .nav-link.active {
+  border-left: 0.15rem solid #1c9e49;
+}

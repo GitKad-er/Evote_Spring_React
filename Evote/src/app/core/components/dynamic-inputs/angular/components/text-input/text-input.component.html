@@ -1,0 +1,113 @@
+<label
+  [for]="inputConfig.formControlName"
+  class="clr-control-label"
+  *ngIf="showLabelAndDescription"
+>
+  {{ inputType.asTextInput(inputConfig).label }}
+  <small
+    class="required-text"
+    *ngIf="inputType.asTextInput(inputConfig).rules?.isRequired"
+  >
+    (*)
+  </small>
+</label>
+<div class="clr-control-container">
+  <div class="clr-input-wrapper">
+    <input
+      [tabIndex]="inputConfig.formControlIndex"
+      (keyup)="
+        keyup.emit({
+          name: inputConfig.formControlName,
+          value: $event
+        })
+      "
+      (keydown)="
+        keydown.emit({
+          name: inputConfig.formControlName,
+          value: $event
+        })
+      "
+      (keypress)="
+        keypress.emit({
+          name: inputConfig.formControlName,
+          value: $event
+        })
+      "
+      (blur)="
+        blur.emit({
+          name: inputConfig.formControlName,
+          value: $event
+        })
+      "
+      [type]="
+        inputType.asTextInput(inputConfig).type === inputTypes.EMAIL_INPUT
+          ? 'email'
+          : 'text'
+      "
+      [maxLength]="
+        inputType.asTextInput(inputConfig).maxLength
+          ? inputType.asTextInput(inputConfig).maxLength
+          : maxNumberSize()
+      "
+      [minLength]="
+        inputType.asTextInput(inputConfig).minLength
+          ? inputType.asTextInput(inputConfig).minLength
+          : 0
+      "
+      [class]="inputType.asTextInput(inputConfig).classes"
+      [formControl]="control"
+      [placeholder]="
+        inputType.asTextInput(inputConfig).placeholder
+          ? inputType.asTextInput(inputConfig).placeholder
+          : ''
+      "
+    />
+  </div>
+  <span
+    [class]="'input__subtext input__error_text'"
+    *ngIf="control.hasError('required') && control.touched"
+    [translate]="'validation.required'"
+  ></span>
+  <span
+    [class]="'input__subtext input__error_text'"
+    *ngIf="control.hasError('maxLength') && control.touched"
+    [translate]="'validation.maxValue'"
+    [translateParams]="{
+      value: inputType.asTextInput(inputConfig).maxLength
+    }"
+  ></span>
+  <span
+    [class]="'input__subtext input__error_text'"
+    *ngIf="control.hasError('minLength') && control.touched"
+    [translate]="'validation.minValue'"
+    [translateParams]="{
+      value: inputType.asTextInput(inputConfig).minLength
+        ? inputType.asTextInput(inputConfig).minLength
+        : getErrorAsNumber(
+            control.errors ? control.errors['minLength'] : '',
+            'minLength'
+          )
+    }"
+  ></span>
+  <span
+    [class]="'input__subtext input__error_text'"
+    *ngIf="control.hasError('pattern') && control.touched"
+    [translate]="'validation.pattern'"
+  ></span>
+  <span
+    [class]="'input__subtext input__error_text'"
+    *ngIf="control.hasError('email') && control.touched"
+    [translate]="'validation.email'"
+  ></span>
+  <span
+    [class]="'input__subtext input__error_text'"
+    *ngIf="control.hasError('notUnique') && control.touched"
+    ,
+    [translate]="'validation.unique'"
+  ></span>
+  <span
+    [class]="'input__subtext'"
+    *ngIf="inputConfig.descriptionText && showLabelAndDescription"
+    [innerHTML]="inputConfig.descriptionText | safeHtml"
+  ></span>
+</div>

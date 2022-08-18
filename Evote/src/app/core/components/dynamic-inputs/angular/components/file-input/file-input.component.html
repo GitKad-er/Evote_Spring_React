@@ -1,0 +1,50 @@
+<ng-container *ngIf="inputConfig">
+  <label
+    class="clr-control-label"
+    *ngIf="showLabelAndDescription"
+    [for]="inputType.asFileInput(inputConfig).formControlName"
+  >
+    {{ inputConfig.label }}
+    <small
+      class="required-text"
+      *ngIf="inputType.asFileInput(inputConfig).rules?.isRequired"
+    >
+      (*)
+    </small>
+  </label>
+  <ng-container *ngIf="inputType.asFileInput(inputConfig).multiple">
+    <app-dropzone
+      #dropzoneContainer
+      *ngIf="dropzoneConfigs"
+      [dropzoneConfig]="dropzoneConfigs"
+      [class]="inputConfig.classes"
+      (removedFile)="onDropzoneFileRemoved($event)"
+      (addedFile)="onDropzoneFileAdded()"
+      [uploadFileText]="'uploadFileLabel' | translate"
+      [dragFileText]="'dragFileLabel' | translate"
+      [defaultMessage]="'upload' | translate"
+    ></app-dropzone>
+  </ng-container>
+  <ng-container *ngIf="!inputType.asFileInput(inputConfig).multiple">
+    <input
+      type="file"
+      fileInput
+      [class]="inputConfig.classes"
+      [maxFileSize]="dropzoneConfigs.maxFilesize || 10"
+      [maxFiles]="1"
+      (sizeError)="onHTMLInputLargeFileEvent($event)"
+      (acceptedFilesChange)="onHTMLInputAcceptFilesChange($event)"
+      (reset)="onResetControlValue()"
+    />
+    <span
+      [class]="'input__subtext input__error_text'"
+      *ngIf="control.hasError('required') && control.touched"
+      [translate]="'validation.required'"
+    ></span>
+    <span
+      [class]="'input__subtext'"
+      *ngIf="inputConfig.descriptionText && showLabelAndDescription"
+      [innerHTML]="inputConfig.descriptionText | safeHtml"
+    ></span>
+  </ng-container>
+</ng-container>

@@ -1,0 +1,148 @@
+<div class="app-page-header clr-row">
+    <div class="clr-col-sm-12">
+      <div class="page-title">
+        <div class="card-header">
+          <h2>Paramètres de compte</h2>
+        </div>
+      </div>
+    </div>
+  </div>
+  <br />
+  
+  <div class="table-row" *ngIf="countUser">
+    <div class="clr-col-sm-12">
+      <table class="table table-vertical">
+        <!-- <caption>
+      Profil table
+    </caption> -->
+        <tbody>
+          <tr>
+            <th>Nom</th>
+            <td>PADARO</td>
+          </tr>
+          <tr>
+            <th>Prénom(s)</th>
+            <td>Raïs</td>
+          </tr>
+          <tr>
+            <th>Identifiant</th>
+            <td>super@gmail.com</td>
+          </tr>
+          <tr>
+            <th>Mot de passe</th>
+            <td>********</td>
+            <td (click)="onEdit()"><clr-icon shape="pencil" class="is-solid" (click)="onEdit()" ></clr-icon></td>
+          </tr>
+          <tr>
+            <th>Adresse Mail</th>
+            <td>super@gmail.com</td>
+          </tr>
+          <tr>
+            <th>Numéro de téléphone</th>
+            <td>91401680</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <div class="table-row"  *ngIf="updateUser" >
+    <div class="clr-col-sm-12">
+      <table class="table table-vertical">
+        <!-- <caption>
+      Profil table
+    </caption> -->
+        <tbody>
+          <tr>
+            <th>Nom</th>
+            <td>PADARO</td>
+          </tr>
+          <tr>
+            <th>Prénom(s)</th>
+            <td>Raïs</td>
+          </tr>
+          <tr>
+            <th>Identifiant</th>
+            <td><div class="clr-col-sm-12">
+              <form class="clr-form clr-form-horizontal">
+                <clr-password-container>
+                  <label>Nouveau mot de passe</label>
+                  <input
+                    placeholder="Saisir nouveau mot de passe"
+                    clrPassword
+                    name="password"
+                    required
+                    minlength="10"
+                  />
+                  <clr-control-helper
+                    >saisir un mot de passe contenant au minimum un caractère spécial,
+                    <br />
+                    un caractère minuscule, majuscule et chiffre</clr-control-helper
+                  >
+                  <clr-control-error *clrIfError="'required'"
+                    >Ce champ est requis!</clr-control-error
+                  >
+                  <clr-control-error *clrIfError="'minlength'"
+                    >It must be at least 8 characters!</clr-control-error
+                  >
+                </clr-password-container>
+            
+                <clr-password-container>
+                  <label>Confirmer</label>
+                  <input
+                    placeholder="Saisir nouveau mot de passe"
+                    clrPassword
+                    name="password"
+                    required
+                    minlength="10"
+                  />
+                  <clr-control-helper>Repetez le nouveau mot de passe</clr-control-helper>
+                  <clr-control-error *clrIfError="'required'"
+                    >Ce champ est requis!</clr-control-error
+                  >
+                  <clr-control-error *clrIfError="'minlength'"
+                    >It must be at least 8 characters!</clr-control-error
+                  >
+                </clr-password-container>
+              <div>
+                <button class="btn btn-primary" (click)="onUpdate()">
+                  <clr-icon shape="pencil" class="is-solid"></clr-icon> Modifier
+                </button>
+                <button class="btn btn-outline" (click)="onCancel()" >
+                  <clr-icon shape="times" ></clr-icon> Annuler
+                </button>
+              </div>
+  
+            </form>
+  
+            </div>
+  
+  
+          </td>
+          </tr>
+         
+          <tr>
+            <th>Adresse Mail</th>
+            <td>super@gmail.com</td>
+          </tr>
+          <tr>
+            <th>Numéro de téléphone</th>
+            <td>91401680</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  
+  
+  

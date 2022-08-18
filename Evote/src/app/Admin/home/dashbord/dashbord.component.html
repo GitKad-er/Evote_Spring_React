@@ -1,0 +1,188 @@
+<div class="page">
+    <div class="app-page-header clr-row">
+      <div class="clr-col-sm-12">
+        <div class="card">
+          <div class="card-header">
+            <h2>EVOTE</h2>
+            <!-- <h2>Gestion de maintenance assistée par ordinateur</h2> -->
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- <div class="clr-col-lg-12 clr-col-md-12 clr-col-sm-12">
+      <div class="card big-card">
+        <div class="card-block clr-row">
+          <div class="clr-col-sm-12 clr-col-md-12">
+            <app-home></app-home>
+          </div>
+        </div>
+      </div>
+    </div> -->
+
+    <div class="clr-col-sm-12">
+      <div class="clr-row">
+        <div class="clr-col-lg-6 clr-col-md-6 clr-col-sm-12">
+          <div class="card big-card">
+            <div class="calendar-main">
+              <div class="calendar">
+                <!-- <full-calendar [options]="calendarOptions"></full-calendar> -->
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="clr-col-lg-6 clr-col-md-6 clr-col-sm-12">
+          <div class="card big-card">
+            <div class="calendar-main">
+              <div class="calendar">
+                <!-- <ngx-pie-chart
+                [chartData]="resulst"
+                [chartOptions]="chartOptions"
+              ></ngx-pie-chart> -->
+              </div>
+              <div class="calendar">
+                <!-- <ngx-pie-chart
+                [chartData]="resulst2"
+                [chartOptions]="chartOptions"
+              ></ngx-pie-chart> -->
+              </div>
+              <div class="calendar">
+                <!-- <ngx-pie-chart
+                [chartData]="resulst3"
+                [chartOptions]="chartOptions"
+              ></ngx-pie-chart> -->
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="clr-col-lg-6 clr-col-md-6 clr-col-sm-12">
+          <div class="card big-card">
+            <div class="calendar-main">
+              <!-- <div class="calendar">
+                <full-calendar [options]="calendarOptions"></full-calendar>
+              </div> -->
+            </div>
+          </div>
+        </div>
+        <div class="clr-col-lg-6 clr-col-md-6 clr-col-sm-12">
+          <div class="card big-card">
+            <div class="calendar-main">
+              <!-- <div class="calendar">
+                <full-calendar [options]="calendarOptions"></full-calendar>
+              </div> -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="clr-col-sm-12">
+      <div class="clr-row">
+        <!-- <div class="clr-col-lg-4 clr-col-md-6 clr-col-sm-12">
+          <div class="card big-card">
+            <div class="card-header">Matériels</div>
+            <div class="card-block clr-row">
+              <div class="big-icon">
+                <clr-icon shape="tools"></clr-icon>
+              </div>
+              <div class="card-text clr-col-10">
+                Parcourir et consulter l'état des équipements
+              </div>
+            </div>
+            <div class="card-footer">
+              <button class="btn btn-primary" (click)="materiel()">
+                <clr-icon shape="folder-open"></clr-icon>
+                Parcourir
+              </button>
+            </div>
+          </div>
+        </div> -->
+
+        <!-- <div class="clr-col-lg-4 clr-col-md-6 clr-col-sm-12">
+          <div class="card big-card">
+            <div class="card-header">Groupes Matériels</div>
+            <div class="card-block clr-row">
+              <div class="big-icon">
+                <clr-icon shape="box-plot"></clr-icon>
+              </div>
+              <div class="card-text clr-col-10">
+                Parcourir et gérer les groupes d'équipements
+              </div>
+            </div>
+            <div class="card-footer">
+              <button class="btn btn-primary" (click)="groupe()">
+                <clr-icon shape="folder-open"></clr-icon>
+                Parcourir
+              </button>
+            </div>
+          </div>
+        </div> -->
+
+        <!-- <div class="clr-col-lg-4 clr-col-md-6 clr-col-sm-12">
+          <div class="card big-card">
+            <div class="card-header">Catégories Matériels</div>
+            <div class="card-block clr-row">
+              <div class="big-icon">
+                <clr-icon shape="bubble-chart"></clr-icon>
+              </div>
+              <div class="card-text clr-col-10">
+                Parcourir et gérer les Catégories d'équipements
+              </div>
+            </div>
+            <div class="card-footer">
+              <button
+                class="btn btn-primary"
+                [disabled]="false"
+                (click)="categorie()"
+              >
+                <clr-icon shape="folder-open"></clr-icon>
+                Parcourir
+              </button>
+            </div>
+          </div>
+        </div> -->
+
+        <!-- <div class="clr-col-lg-4 clr-col-md-6 clr-col-sm-12">
+          <div class="card big-card">
+            <div class="card-header">Adresses Matériels</div>
+            <div class="card-block clr-row">
+              <div class="big-icon">
+                <clr-icon shape="clipboard"></clr-icon>
+              </div>
+              <div class="card-text clr-col-10">
+                Gérer l'adressage des équipements
+              </div>
+            </div>
+            <div class="card-footer">
+              <button class="btn btn-primary" (click)="adresse()">
+                <clr-icon shape="folder-open"></clr-icon>
+                Parcourir
+              </button>
+            </div>
+          </div>
+        </div> -->
+<!-- 
+        <div class="clr-col-lg-4 clr-col-md-6 clr-col-sm-12">
+          <div class="card big-card">
+            <div class="card-header">Tâches</div>
+            <div class="card-block clr-row">
+              <div class="big-icon">
+                <clr-icon shape="tasks"></clr-icon>
+              </div>
+              <div class="card-text clr-col-10">
+                Consulter et planifier des tâches
+              </div>
+            </div>
+            <div class="card-footer">
+              <button class="btn btn-primary" (click)="tache()">
+                <clr-icon shape="folder-open"></clr-icon>
+                Parcourir
+              </button>
+            </div>
+          </div>
+        </div> -->
+
+
+     
+    </div> 
+  </div>

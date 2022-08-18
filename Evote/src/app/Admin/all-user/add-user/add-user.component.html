@@ -1,0 +1,10 @@
+<div class="clr-col-12">
+    <ng-container *ngIf="forms | async as form">
+        <ngx-smart-form
+          #formvalue
+          [form]="form"
+          (submit)="onSubmit($event)"
+          [submitable]="true"
+        ></ngx-smart-form>
+      </ng-container>
+</div>
