@@ -45,6 +45,11 @@ public class UserDetail implements UserDetails {
   private Boolean locked = false;
   private Boolean enabled = false;
 
+
+  //Relation Avec BulletinVotes
+  @OneToMany(mappedBy = "userDetail")
+  List<BulletinVote> bulletinVotes;
+
   @ManyToMany(fetch = FetchType.LAZY)
   @JoinTable(  name = "user_roles",
           joinColumns = @JoinColumn(name = "user_id"),

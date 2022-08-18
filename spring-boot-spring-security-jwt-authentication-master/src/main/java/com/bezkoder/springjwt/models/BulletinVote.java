@@ -22,10 +22,9 @@ public class BulletinVote {
     private Boolean hasVoted;
 
     //Relation avec users
-    @OneToOne(cascade = CascadeType.ALL)
-    @JoinColumn(name="userId",referencedColumnName = "id" , insertable = false, updatable = false)
+    @ManyToOne
+    @JoinColumn(name="userId", insertable = false, updatable = false)
     private UserDetail userDetail;
-    private Long userId;
 
 
 
