@@ -29,7 +29,8 @@ public class Election {
 
     private Date datefin;
 
-    String status;
+    private String status;
+    private double nombreVotants;
 
 
 

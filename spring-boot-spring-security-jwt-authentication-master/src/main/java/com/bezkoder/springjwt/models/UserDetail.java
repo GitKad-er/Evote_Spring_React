@@ -24,14 +24,10 @@ public class UserDetail implements UserDetails {
   @Id
   @GeneratedValue(strategy = GenerationType.IDENTITY)
   private Long id;
-
   @NotBlank
   @Size(max = 20)
   private String firstname;
-
-
   private String lastname;
-
   private Date birthdate;
 
   private int age;
@@ -40,7 +36,6 @@ public class UserDetail implements UserDetails {
   @Size(max = 50)
   @Email
   private String email;
-
   @NotBlank
   @Size(max = 120)
   private String password;

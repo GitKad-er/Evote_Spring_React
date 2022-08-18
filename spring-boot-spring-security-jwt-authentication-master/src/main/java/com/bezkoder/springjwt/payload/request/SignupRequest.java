@@ -22,17 +22,17 @@ public class SignupRequest {
 
   private String lastname;
 
-  @NotBlank
+  //@NotBlank
   private Date birthdate;
 
   private int age;
   private char sex;
-  @NotBlank
+ // @NotBlank
   @Size(max = 50)
   @Email
   private String email;
 
-  @NotBlank
+ // @NotBlank
   @Size(max = 120)
   private String password;
 

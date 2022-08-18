@@ -19,17 +19,14 @@ public class BulletinVote {
     private Long id;
     private String libelle;
     private String codeVote;
-
+    private Boolean hasVoted;
 
     //Relation avec users
     @OneToOne(cascade = CascadeType.ALL)
-    @JoinColumn(name="user_id",referencedColumnName = "id" , insertable = false, updatable = false)
-    private UserDetail userDetails;
-    private Long user_id;
+    @JoinColumn(name="userId",referencedColumnName = "id" , insertable = false, updatable = false)
+    private UserDetail userDetail;
+    private Long userId;
 
-    //Relation avec vote
-    @OneToMany(mappedBy = "bulletinVote")
-    List<Vote> voteList;
 
 
 

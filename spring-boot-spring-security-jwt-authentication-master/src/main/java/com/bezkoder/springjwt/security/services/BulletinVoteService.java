@@ -18,4 +18,7 @@ public class BulletinVoteService {
     public void save(BulletinVote bulletinVote) {
         bulletinVoteRepository.save(bulletinVote);
     }
+    public BulletinVote findAllByUser_id(Long id){
+        return bulletinVoteRepository.findAllByUserId(id);
+    };
 }

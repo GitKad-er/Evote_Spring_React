@@ -36,7 +36,8 @@ public class Candidat {
 
     //Relation avec Election
     @ManyToOne
-    @JoinColumn(name="election_id", insertable = false, updatable = false, nullable = false)
+    @JoinColumn(name="election_id", insertable = false, updatable = false, nullable = false
+    )
     private Election election;
 
 }

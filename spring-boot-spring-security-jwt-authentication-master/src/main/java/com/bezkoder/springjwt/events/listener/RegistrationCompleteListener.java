@@ -38,7 +38,7 @@ public class RegistrationCompleteListener implements ApplicationListener<onUserR
 
                 BulletinVote bulletinVote = new BulletinVote();
                 bulletinVote.setLibelle("Bulletin de vote pour l'élection "+election.getDescription());
-                bulletinVote.setUser_id(user.getId());
+                //bulletinVote.setUser_id(user.getId());
                 bulletinVote.setCodeVote(genererString(6));
                 bulletinService.save(bulletinVote);
             }

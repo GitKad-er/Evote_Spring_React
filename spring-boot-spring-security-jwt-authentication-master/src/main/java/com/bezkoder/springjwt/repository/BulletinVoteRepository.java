@@ -6,4 +6,5 @@ import org.springframework.data.jpa.repository.JpaRepository;
 
 public interface BulletinVoteRepository extends JpaRepository<BulletinVote, Long> {
 
+    BulletinVote findAllByUserId(Long id);
 }

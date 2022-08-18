@@ -23,7 +23,8 @@ public class Vote {
     Candidat candidat;
 
     //Relation avec Bulletin
-    @ManyToOne
-    @JoinColumn(name="bulletin_id", insertable = false, updatable = false, nullable = false)
-    BulletinVote bulletinVote;
+    @OneToOne(cascade = CascadeType.ALL)
+    @JoinColumn(name="bulletinId",referencedColumnName = "id" , insertable = false, updatable = false)
+    private BulletinVote bulletinVote;
+
 }
