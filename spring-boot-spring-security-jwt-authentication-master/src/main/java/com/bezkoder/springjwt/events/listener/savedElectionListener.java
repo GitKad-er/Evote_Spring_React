@@ -39,7 +39,7 @@ public class savedElectionListener implements ApplicationListener<onElectionSave
 
                 BulletinVote bulletinVote = new BulletinVote();
                 bulletinVote.setLibelle("Bulletin de vote pour l'élection "+election.getDescription());
-               // bulletinVote.setUser_id(user.getId());
+                bulletinVote.setUserDetail(userDetailsService.getUser(user.getId()));
                 bulletinVote.setCodeVote(genererString(6));
                 bulletinService.save(bulletinVote);
             }
