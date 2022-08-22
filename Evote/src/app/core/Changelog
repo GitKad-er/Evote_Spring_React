@@ -1,4 +1,0 @@
-# List of changes
-
-- Added setControlConfig method to SimpleDynamicFormComponent component
-- Added getControlConfig method to SimpleDynamicFormComponent component
